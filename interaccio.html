@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="estils.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body id="pagina-interaccio"> <!-- AÑADIR ESTO -->
+<body id="pagina-interaccio"> 
     <nav class="navbar">
         <div class="navbar-container">
             <h1 class="logo">🎨 Interactivitat CSS</h1>
+            
+            <!-- ESTO ES LO QUE FALTA - TOGGLE MOBILE -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </label>
+            
             <ul class="nav-links">
                 <li><a href="index.html">Formulari</a></li>
                 <li><a href="interaccio.html">Interactivitat</a></li>
+                <li><a href="#tabs-section">Pestanyes</a></li>
+                <li><a href="#carousel-section">Carrusel</a></li>
             </ul>
         </div>
     </nav>
@@ -21,6 +31,8 @@
     <main class="container">
         <h2>Pàgina d'Interactivitat amb CSS</h2>
         <p>Aquesta pàgina contindrà els components interactius.</p>
+        
+        <!-- Los componentes de tabs y carrusel irán en Commits 12-13 -->
     </main>
 </body>
 </html>

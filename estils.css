@@ -497,3 +497,177 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.2);
 }
+
+
+/* Responsive del formulari i millores */
+.footer {
+    text-align: center;
+    margin-top: var(--espacio-xl);
+    padding: var(--espacio-md);
+    color: #666;
+    border-top: 2px solid var(--color-borde);
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
+textarea:focus ~ .char-counter {
+    opacity: 1;
+    color: var(--color-primario);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formulari {
+        padding: var(--espacio-md);
+    }
+    
+    .form-header {
+        padding: var(--espacio-md);
+    }
+    
+    .form-section {
+        padding: var(--espacio-md);
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        gap: var(--espacio-sm);
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .checkbox-group,
+    .radio-group {
+        flex-direction: column;
+        gap: var(--espacio-sm);
+    }
+    
+    .range-labels {
+        font-size: 0.8rem;
+    }
+    
+    .color-picker-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--espacio-sm);
+    }
+    
+    .color-picker-container input[type="color"] {
+        width: 100%;
+        max-width: 100px;
+    }
+    
+    .validation-icon {
+        right: 8px;
+        top: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: var(--espacio-sm);
+        font-size: 0.9rem;
+    }
+    
+    .form-section legend {
+        font-size: 1rem;
+    }
+}
+
+
+/* COMMIT 11: Toggle menu mobile */
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1001;
+    padding: var(--espacio-xs);
+}
+
+.menu-btn .fa-times {
+    display: none;
+}
+
+.menu-toggle:checked ~ .menu-btn .fa-bars {
+    display: none;
+}
+
+.menu-toggle:checked ~ .menu-btn .fa-times {
+    display: inline-block;
+}
+
+/* Navbar sticky (requerimiento) */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Responsive: toggle en mòbil */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-primario);
+        flex-direction: column;
+        padding: var(--espacio-md);
+        display: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: var(--espacio-sm);
+        border-radius: 4px;
+        transition: all var(--transicion-rapida);
+    }
+    
+    .nav-links a:hover {
+        background-color: var(--color-secundario);
+        transform: translateX(5px);
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
