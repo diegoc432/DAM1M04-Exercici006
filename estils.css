@@ -879,3 +879,49 @@ textarea:focus ~ .char-counter {
 #pagina-interaccio:has(#slide3:checked) label[for="slide3"] {
     background: white;
 }
+
+/* Transicions addicionals (mínim 5 elements) */
+/* 1. Transició als dots del carrusel */
+.carousel-dot {
+    transition: all var(--transicion-media);
+}
+
+/* 2. Transició als botons de navegació del carrusel */
+.carousel-prev,
+.carousel-next {
+    transition: all var(--transicion-media);
+}
+
+/* 3. Transició als botons de tabs */
+.tab-btn {
+    transition: all var(--transicion-media);
+}
+
+/* 4. Transició als elements del menu mobile */
+.nav-links a {
+    transition: all var(--transicion-media);
+}
+
+/* 5. Transició als slides del carrusel */
+.carousel-slide {
+    transition: opacity var(--transicion-lenta), transform var(--transicion-lenta);
+}
+
+/* 6. Transició extra: hover als sections */
+.section {
+    transition: transform var(--transicion-media), box-shadow var(--transicion-media);
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* 7. Transició als botons del formulari (ja hi és, afegim millora) */
+.btn {
+    transition: all var(--transicion-media), transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
