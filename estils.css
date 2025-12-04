@@ -671,3 +671,83 @@ textarea:focus ~ .char-counter {
         }
     }
 }
+
+
+/* Sistema de pestanyes (tabs) */
+.section {
+    background: white;
+    padding: var(--espacio-xl);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: var(--espacio-xl);
+}
+
+.section h2 {
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-md);
+}
+
+/* Tabs container */
+.tabs-container {
+    margin-top: var(--espacio-lg);
+}
+
+.tab-radio {
+    display: none;
+}
+
+/* Capçalera de tabs */
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: var(--espacio-lg);
+}
+
+.tab-btn {
+    padding: var(--espacio-sm) var(--espacio-lg);
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all var(--transicion-media);
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-xs);
+}
+
+.tab-btn:hover {
+    color: var(--color-primario);
+    background-color: var(--color-fondo);
+}
+
+/* Contingut de tabs */
+.tabs-content {
+    padding: var(--espacio-md);
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Lògica de les tabs amb :has() */
+#pagina-interaccio:has(#tab1:checked) .content-1,
+#pagina-interaccio:has(#tab2:checked) .content-2,
+#pagina-interaccio:has(#tab3:checked) .content-3 {
+    display: block;
+}
+
+#pagina-interaccio:has(#tab1:checked) label[for="tab1"],
+#pagina-interaccio:has(#tab2:checked) label[for="tab2"],
+#pagina-interaccio:has(#tab3:checked) label[for="tab3"] {
+    color: var(--color-primario);
+    border-bottom-color: var(--color-primario);
+    background-color: rgba(74, 111, 165, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

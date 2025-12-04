@@ -12,7 +12,7 @@
         <div class="navbar-container">
             <h1 class="logo">🎨 Interactivitat CSS</h1>
             
-            <!-- ESTO ES LO QUE FALTA - TOGGLE MOBILE -->
+        
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -32,7 +32,53 @@
         <h2>Pàgina d'Interactivitat amb CSS</h2>
         <p>Aquesta pàgina contindrà els components interactius.</p>
         
-        <!-- Los componentes de tabs y carrusel irán en Commits 12-13 -->
+        <section class="section" id="tabs-section">
+        <h2><i class="fas fa-folder-open"></i> Sistema de Pestanyes amb CSS</h2>
+        <p>Canvia entre continguts utilitzant només CSS, sense JavaScript.</p>
+        
+        <div class="tabs-container">
+            <!-- Radio buttons ocults -->
+            <input type="radio" name="tab" id="tab1" checked class="tab-radio">
+            <input type="radio" name="tab" id="tab2" class="tab-radio">
+            <input type="radio" name="tab" id="tab3" class="tab-radio">
+            
+            <!-- Botons de les pestanyes -->
+            <div class="tabs-header">
+                <label for="tab1" class="tab-btn">
+                    <i class="fas fa-info-circle"></i> Informació
+                </label>
+                <label for="tab2" class="tab-btn">
+                    <i class="fas fa-cogs"></i> Configuració
+                </label>
+                <label for="tab3" class="tab-btn">
+                    <i class="fas fa-chart-bar"></i> Estadístiques
+                </label>
+            </div>
+            
+            <!-- Contingut de les pestanyes -->
+            <div class="tabs-content">
+                <div class="tab-pane content-1">
+                    <h3>Informació General</h3>
+                    <p>Aquest és el contingut de la primera pestanya.</p>
+                    <ul>
+                        <li>Sense JavaScript</li>
+                        <li>Accessible amb teclat</li>
+                        <li>Totalment responsive</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-pane content-2">
+                    <h3>Configuració</h3>
+                    <p>Configura les teves preferències.</p>
+                </div>
+                
+                <div class="tab-pane content-3">
+                    <h3>Estadístiques</h3>
+                    <p>Visualitza les dades estadístiques.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
     </main>
 </body>
 </html>
