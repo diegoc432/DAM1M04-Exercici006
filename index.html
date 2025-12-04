@@ -171,6 +171,37 @@
             <i class="fas fa-undo"></i> Esborrar Tot
         </button>
     </div>
+
+    <!-- Nom complet -->
+<div class="form-group">
+    <label for="nom" class="required">Nom complet *</label>
+    <input type="text" id="nom" name="nom" required 
+           pattern="[A-Za-zÀ-ÿ\s]{3,50}"
+           title="Només lletres i espais (3-50 caràcters)"
+           placeholder="Introdueix el teu nom complet">
+    <span class="hint">Exemple: Maria García López</span>
+    <div class="validation-icon"></div>
+</div>
+
+<!-- Telèfon -->
+<div class="form-group">
+    <label for="telefon">Telèfon</label>
+    <input type="tel" id="telefon" name="telefon"
+           pattern="[0-9]{9}"
+           title="9 dígits sense espais"
+           placeholder="123456789">
+    <span class="hint">Format: 9 dígits</span>
+    <div class="validation-icon"></div>
+</div>
+
+<!-- Email (també afegim icona) -->
+<div class="form-group">
+    <label for="email" class="required">Correu electrònic *</label>
+    <input type="email" id="email" name="email" required
+           placeholder="exemple@domini.com">
+    <div class="validation-icon"></div>
+</div>
+
 </form>
 </main>
 </body>
