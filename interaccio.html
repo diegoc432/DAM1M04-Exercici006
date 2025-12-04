@@ -79,6 +79,62 @@
             </div>
         </div>
     </section> 
+
+    <section class="section" id="carousel-section">
+    <h2><i class="fas fa-images"></i> Carrusel d'Imatges amb CSS</h2>
+    <p>Navega per les imatges utilitzant radio buttons.</p>
+    
+    <div class="carousel-container">
+        <!-- Radio buttons per controlar slides -->
+        <input type="radio" name="carousel" id="slide1" checked class="carousel-radio">
+        <input type="radio" name="carousel" id="slide2" class="carousel-radio">
+        <input type="radio" name="carousel" id="slide3" class="carousel-radio">
+        
+        <!-- Slides -->
+        <div class="carousel-slides">
+            <div class="carousel-slide slide-1">
+                <div class="slide-content">
+                    <h3>Natura</h3>
+                    <p>Descobreix la bellesa del món natural.</p>
+                    <div class="slide-image nature"></div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide slide-2">
+                <div class="slide-content">
+                    <h3>Tecnologia</h3>
+                    <p>Les últimes innovacions tecnològiques.</p>
+                    <div class="slide-image tech"></div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide slide-3">
+                <div class="slide-content">
+                    <h3>Art</h3>
+                    <p>Expressió creativa en totes les seves formes.</p>
+                    <div class="slide-image art"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controls del carrusel -->
+        <div class="carousel-controls">
+            <label for="slide1" class="carousel-dot"></label>
+            <label for="slide2" class="carousel-dot"></label>
+            <label for="slide3" class="carousel-dot"></label>
+        </div>
+        
+        <!-- Navegació amb fletxes -->
+        <div class="carousel-nav">
+            <label for="slide3" class="carousel-prev">
+                <i class="fas fa-chevron-left"></i>
+            </label>
+            <label for="slide2" class="carousel-next">
+                <i class="fas fa-chevron-right"></i>
+            </label>
+        </div>
+    </div>
+</section>
     </main>
 </body>
 </html>
