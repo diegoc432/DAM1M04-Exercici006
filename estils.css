@@ -38,3 +38,42 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Navbar amb Flexbox */
+.navbar {
+    background-color: var(--color-primario);
+    padding: var(--espacio-sm) 0;
+    margin-bottom: var(--espacio-lg);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--espacio-md);
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--espacio-md);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    border-radius: 4px;
+    transition: background-color var(--transicion-rapida);
+}
+
+.nav-links a:hover {
+    background-color: var(--color-secundario);
+}
