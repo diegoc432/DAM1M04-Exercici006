@@ -925,3 +925,97 @@ textarea:focus ~ .char-counter {
 .btn:active {
     transform: scale(0.98);
 }
+
+
+/* Responsive per a interactivitat */
+@media (max-width: 768px) {
+    
+    .tabs-header {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .tab-btn {
+        border-bottom: 2px solid var(--color-borde);
+        border-radius: 0;
+        text-align: left;
+    }
+    
+    .tab-btn:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    
+    .tab-btn:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
+    #pagina-interaccio:has(#tab1:checked) label[for="tab1"],
+    #pagina-interaccio:has(#tab2:checked) label[for="tab2"],
+    #pagina-interaccio:has(#tab3:checked) label[for="tab3"] {
+        border-left: 4px solid var(--color-primario);
+        border-bottom-color: var(--color-borde);
+    }
+    
+   
+    .carousel-container {
+        height: 350px;
+    }
+    
+    .slide-content {
+        padding: var(--espacio-lg);
+    }
+    
+    .slide-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-nav {
+        display: none;
+    }
+    
+    .carousel-controls {
+        bottom: var(--espacio-md);
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+   
+    .section {
+        padding: var(--espacio-lg);
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .slide-content {
+        padding: var(--espacio-md);
+    }
+    
+    .slide-image {
+        height: 150px;
+    }
+    
+
+    .tab-btn {
+        padding: var(--espacio-sm);
+        font-size: 0.9rem;
+    }
+    
+    
+    .section {
+        padding: var(--espacio-md);
+    }
+}
